@@ -12,7 +12,7 @@ class RouterTest extends TestCase
     {
         $match = new Router();
 
-        $this->assertEquals('a', 'a');
+        $this->assertEquals('a', 'b');
     }
 
 }
