@@ -10,9 +10,9 @@ class RouterTest extends TestCase
 
     public function testTest()
     {
-        $match = new Router();
-
-        $this->assertEquals('a', 'a');
+//        $match = new Router();
+//
+//        $this->assertEquals('a', 'a');
     }
 
 }
