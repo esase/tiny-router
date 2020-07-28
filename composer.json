@@ -25,5 +25,9 @@
     "psr-4": {
       "TinyTest\\Router\\": "test/"
     }
+  },
+  "scripts": {
+    "test": "phpunit --colors=always",
+    "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
   }
 }
