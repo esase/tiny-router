@@ -12,6 +12,10 @@ install:
 
 script:
   - composer test
+  - composer test-coverage
+
+after_success:
+  - travis_retry php vendor/bin/php-coveralls -v
 
 notifications:
   email: false
