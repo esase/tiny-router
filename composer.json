@@ -1,0 +1,29 @@
+{
+  "name": "esase/tiny-router",
+  "description": "Flexible routing system for HTTP and console applications",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "esase",
+    "tinyframework",
+    "mvc",
+    "routing"
+  ],
+  "support": {
+  },
+  "require": {
+    "php": "^7.4 || ^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0 || ^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tiny\\Router\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TinyTest\\Router\\": "test/"
+    }
+  }
+}
