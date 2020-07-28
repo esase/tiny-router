@@ -1,5 +1,8 @@
 <?php
 
+
+phpinfo();
+exit;
 use Tiny\Router;
 
 require_once __DIR__ . '/vendor/autoload.php';
