@@ -4,8 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "174a1e3e95018604f463f5b00fb32b85",
-    "packages": [],
+    "content-hash": "3d336f3d75b3dee7f9cac90826f5e33c",
+    "packages": [
+        {
+            "name": "esase/tiny-http",
+            "version": "v1.0-alpha",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/esase/tiny-http.git",
+                "reference": "7e48e2bc950a487a7ca4153b95fdffeec8ea1f8d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/esase/tiny-http/zipball/7e48e2bc950a487a7ca4153b95fdffeec8ea1f8d",
+                "reference": "7e48e2bc950a487a7ca4153b95fdffeec8ea1f8d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^9.0 || ^10.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tiny\\Http\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "An abstraction layer for http requests and responses",
+            "keywords": [
+                "esase",
+                "http",
+                "lightweight",
+                "mvc",
+                "request",
+                "response",
+                "tinyframework"
+            ],
+            "time": "2020-08-02T08:07:22+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
@@ -3533,7 +3577,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "esase/tiny-http": 15
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
