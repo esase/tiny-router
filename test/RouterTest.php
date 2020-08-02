@@ -104,7 +104,9 @@ class RouterTest extends TestCase
             $router->setDefaultRoute($defaultRoute);
         }
 
-        list($expectedController, $expectedAction, $expectedParams) = $expect;
+        $expectedController = $expect[0] ?? '';
+        $expectedAction = $expect[1] ?? '';
+        $expectedParams = $expect[2] ?? [];
 
         $matchedRoute = $router->getMatchedRoute();
         $this->assertEquals(
@@ -277,11 +279,13 @@ class RouterTest extends TestCase
         );
         $router->registerRoutes($routes);
         $router->setAssembleParamDivider('__');
-        $this->assertEquals($expectedRequest, $router->assembleRequest(
+        $this->assertEquals(
+            $expectedRequest, $router->assembleRequest(
             $controller,
             $action,
             $params
-        ));
+        )
+        );
     }
 
     public function testAssembleRequestMethodUsingEmptyRouteList()
@@ -333,7 +337,7 @@ class RouterTest extends TestCase
                         '|^/users/(?P<id>\d+)$|i',
                         'UserController',
                         [
-                            'GET' => 'view',
+                            'GET'    => 'view',
                             'DELETE' => 'delete',
                         ],
                         'regexp',
@@ -345,8 +349,8 @@ class RouterTest extends TestCase
                 'view',
                 '/users/100',
                 [
-                    'id' => 100
-                ]
+                    'id' => 100,
+                ],
             ],
             [
                 [
@@ -359,12 +363,12 @@ class RouterTest extends TestCase
                         '/',
                         'HomeController',
                         'index'
-                    )
+                    ),
                 ],
                 'HomeController',
                 'index',
-                '/'
-            ]
+                '/',
+            ],
         ];
     }
 
