@@ -4,3 +4,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/esase/tiny-router/badge.svg?branch=master&service=github)](https://coveralls.io/github/esase/tiny-router?branch=master)
 
 Standalone routing implementation for HTTP and console requests
+
+
+## Installation
+
+Run the following to install this library:
+
+```bash
+$ composer require esase/tiny-router
+```
