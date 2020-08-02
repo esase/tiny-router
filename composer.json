@@ -1,16 +1,24 @@
 {
   "name": "esase/tiny-router",
-  "description": "Flexible routing system for HTTP and console applications",
-  "license": "BSD-3-Clause",
+  "type": "library",
+  "description": "Flexible routing system component for HTTP and console applications",
+  "license": "MIT",
   "keywords": [
     "esase",
     "tinyframework",
+    "framework",
     "lightweight",
     "mvc",
     "routing"
   ],
   "support": {
   },
+   "authors": [
+        {
+            "name": "Alex Ermashev",
+            "email": "alexermashev@gmail.com"
+        }
+    ],
   "require": {
     "php": "^7.4 || ^8.0",
     "esase/tiny-http": "v1.0-alpha"
@@ -32,5 +40,6 @@
   "scripts": {
     "test": "phpunit --colors=always",
     "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
-  }
+  },
+  "minimum-stability": "dev"
 }
