@@ -41,5 +41,6 @@
     "test": "phpunit --colors=always",
     "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "prefer-stable" : true
 }
