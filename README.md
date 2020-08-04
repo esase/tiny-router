@@ -13,3 +13,7 @@ Run the following to install this library:
 ```bash
 $ composer require esase/tiny-router
 ```
+
+## Documentation
+
+https://tiny-docs.readthedocs.io/en/latest/tiny-router/docs/index.html
