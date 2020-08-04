@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d336f3d75b3dee7f9cac90826f5e33c",
+    "content-hash": "cda64d91df632a8177dc3851fcd39a5f",
     "packages": [
         {
             "name": "esase/tiny-http",
-            "version": "v1.0-alpha",
+            "version": "v1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/esase/tiny-http.git",
-                "reference": "7e48e2bc950a487a7ca4153b95fdffeec8ea1f8d"
+                "reference": "33bcc639d8077444efc45815ba1196d2eeecba98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/esase/tiny-http/zipball/7e48e2bc950a487a7ca4153b95fdffeec8ea1f8d",
-                "reference": "7e48e2bc950a487a7ca4153b95fdffeec8ea1f8d",
+                "url": "https://api.github.com/repos/esase/tiny-http/zipball/33bcc639d8077444efc45815ba1196d2eeecba98",
+                "reference": "33bcc639d8077444efc45815ba1196d2eeecba98",
                 "shasum": ""
             },
             "require": {
@@ -35,19 +35,25 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
-            "description": "An abstraction layer for http requests and responses",
+            "authors": [
+                {
+                    "name": "Alex Ermashev",
+                    "email": "alexermashev@gmail.com"
+                }
+            ],
+            "description": "An abstraction layer component for http requests and responses",
             "keywords": [
                 "esase",
+                "framework",
                 "http",
                 "lightweight",
-                "mvc",
                 "request",
                 "response",
                 "tinyframework"
             ],
-            "time": "2020-08-02T08:07:22+00:00"
+            "time": "2020-08-04T08:00:59+00:00"
         }
     ],
     "packages-dev": [
@@ -2476,7 +2482,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -2552,7 +2558,7 @@
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
@@ -2630,16 +2636,16 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "bc6549d068d0160e0f10f7a5a23c7d1406b95ebe"
+                "reference": "5dcab1bc7146cf8c1beaa4502a3d9be344334251"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/bc6549d068d0160e0f10f7a5a23c7d1406b95ebe",
-                "reference": "bc6549d068d0160e0f10f7a5a23c7d1406b95ebe",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/5dcab1bc7146cf8c1beaa4502a3d9be344334251",
+                "reference": "5dcab1bc7146cf8c1beaa4502a3d9be344334251",
                 "shasum": ""
             },
             "require": {
@@ -2711,11 +2717,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-08-04T06:02:08+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -2796,7 +2802,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -2873,7 +2879,7 @@
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
@@ -2950,7 +2956,7 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -3023,7 +3029,7 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
@@ -3099,7 +3105,7 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -3576,11 +3582,9 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {
-        "esase/tiny-http": 15
-    },
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.4 || ^8.0"
