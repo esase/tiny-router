@@ -21,12 +21,12 @@ class Route
     /**
      * @var string
      */
-    private $request;
+    private string $request;
 
     /**
      * @var string
      */
-    private $controller;
+    private string $controller;
 
     /**
      * @var array|string
@@ -36,31 +36,22 @@ class Route
     /**
      * @var string
      */
-    private $type;
+    private string $type;
 
     /**
      * @var array
      */
-    private $requestParams = [];
-
-    /**
-     * @var
-     */
-    private $spec;
+    private array $requestParams = [];
 
     /**
      * @var string
      */
-    private $matchedAction;
+    private string $spec;
 
     /**
-     * @var array
+     * @var string
      */
-    private $allowedTypes
-        = [
-            self::TYPE_LITERAL,
-            self::TYPE_REGEXP,
-        ];
+    private string $matchedAction;
 
     /**
      * Route constructor.
@@ -81,26 +72,11 @@ class Route
         string $spec = ''
     ) {
         $this->request = $request;
-        if (!in_array($type, $this->allowedTypes)) {
-            throw new Exception\InvalidArgumentException(
-                sprintf(
-                    'Route type should be one of: %s',
-                    implode(', ', $this->allowedTypes)
-                )
-            );
-        }
-
         $this->type = $type;
         $this->controller = $controller;
         $this->actionList = $actionList;
         $this->requestParams = $requestParams;
         $this->spec = $spec;
-
-        if (!$this->isLiteral() && !$this->spec) {
-            throw new Exception\InvalidArgumentException(
-                'The regexp route must be provided with `spec` for assembling requests'
-            );
-        }
     }
 
     /**
@@ -112,6 +88,18 @@ class Route
     }
 
     /**
+     * @param string $request
+     *
+     * @return $this
+     */
+    public function setRequest(string $request): self
+    {
+        $this->request = $request;
+
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getController(): string
@@ -120,11 +108,55 @@ class Route
     }
 
     /**
+     * @param string $controller
+     *
+     * @return $this
+     */
+    public function setController(string $controller): self
+    {
+        $this->controller = $controller;
+
+        return $this;
+    }
+
+    /**
      * @return array|string
      */
     public function getActionList()
     {
         return $this->actionList;
+    }
+
+    /**
+     * @param array|string $actionList
+     *
+     * @return $this
+     */
+    public function setActionList($actionList): self
+    {
+        $this->actionList = $actionList;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     *
+     * @return $this
+     */
+    public function setType(string $type): self
+    {
+        $this->type = $type;
+
+        return $this;
     }
 
     /**
@@ -144,11 +176,35 @@ class Route
     }
 
     /**
+     * @param array $requestParams
+     *
+     * @return $this
+     */
+    public function setRequestParams(array $requestParams): self
+    {
+        $this->requestParams = $requestParams;
+
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getSpec(): string
     {
         return $this->spec;
+    }
+
+    /**
+     * @param string $spec
+     *
+     * @return $this
+     */
+    public function setSpec(string $spec): self
+    {
+        $this->spec = $spec;
+
+        return $this;
     }
 
     /**
@@ -160,11 +216,15 @@ class Route
     }
 
     /**
-     * @param  string  $action
+     * @param string $action
+     *
+     * @return $this
      */
-    public function setMatchedAction(string $action)
+    public function setMatchedAction(string $action): self
     {
         $this->matchedAction = $action;
+
+        return $this;
     }
 
 }

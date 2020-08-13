@@ -19,37 +19,37 @@ class Router
     /**
      * @var Request
      */
-    private $request;
+    private Request $request;
 
     /**
-     * @var Route
+     * @var Route|null
      */
-    private $defaultRoute;
+    private ?Route $defaultRoute = null;
 
     /**
      * @var Route[]
      */
-    private $allRoutes = [];
+    private array $allRoutes = [];
 
     /**
      * @var array
      */
-    private $assembleRoutesMap = [];
+    private array $assembleRoutesMap = [];
 
     /**
      * @var string
      */
-    private $assembleParamDivider = '%';
+    private string $assembleParamDivider = '%';
 
     /**
      * @var array
      */
-    private $literalRoutesMap = [];
+    private array $literalRoutesMap = [];
 
     /**
      * @var array
      */
-    private $regexpRoutesMap = [];
+    private array $regexpRoutesMap = [];
 
     /**
      * Router constructor.
