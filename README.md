@@ -8,7 +8,7 @@ Standalone routing implementation for HTTP and console requests
 
 ## Installation
 
-Run the following to install this library:
+Run the following to install this library: 
 
 ```bash
 $ composer require esase/tiny-router
