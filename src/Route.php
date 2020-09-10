@@ -51,17 +51,23 @@ class Route
     /**
      * @var string
      */
-    private string $matchedAction;
+    private string $context;
+
+    /**
+     * @var string|null
+     */
+    private ?string $matchedAction;
 
     /**
      * Route constructor.
      *
-     * @param  string        $request
-     * @param  string        $controller
-     * @param  string|array  $actionList
-     * @param  string        $type
-     * @param  array         $requestParams
-     * @param  string        $spec
+     * @param string       $request
+     * @param string       $controller
+     * @param string|array $actionList
+     * @param string       $type
+     * @param array        $requestParams
+     * @param string       $spec
+     * @param string       $context
      */
     public function __construct(
         string $request,
@@ -69,7 +75,8 @@ class Route
         $actionList,
         string $type = self::TYPE_LITERAL,
         array $requestParams = [],
-        string $spec = ''
+        string $spec = '',
+        string $context = ''
     ) {
         $this->request = $request;
         $this->type = $type;
@@ -77,6 +84,7 @@ class Route
         $this->actionList = $actionList;
         $this->requestParams = $requestParams;
         $this->spec = $spec;
+        $this->context = $context;
     }
 
     /**
@@ -208,9 +216,29 @@ class Route
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getMatchedAction(): string
+    public function getContext()
+    {
+        return $this->context;
+    }
+
+    /**
+     * @param string $context
+     *
+     * @return $this
+     */
+    public function setContext(string $context): self
+    {
+        $this->context = $context;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getMatchedAction()
     {
         return $this->matchedAction;
     }

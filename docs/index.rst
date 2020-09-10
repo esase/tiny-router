@@ -19,8 +19,9 @@ Run the following to install this library:
 Route
 -----
 
-The :code:`Route()` object is responsible for storing a meta information describing the route.
-There is no any difference between **HTTP** and **CLI** routes and there are two types of routes which you may operate:
+The :code:`Route()` object is responsible for storing a meta information describing the route (controller, action, etc).
+There is no any difference between **HTTP** and **CLI** routes (but anyway you may add a context of the route, see examples below).
+There are two types of routes which you may operate:
 
 1. **Literal** - just a fixed string without any dynamic parameters. For the **HTTP** it would be like: :code:`/users/list`, and for the **CLI**: :code:`users import`.
 2. **Regexp** - this type allows to write powerful routes using `Regular expression` and include tricky parameters.
@@ -92,7 +93,8 @@ Instead of a simple string we pass a string in the `regular expression format`. 
             ],
             'regexp',
             ['id'],
-            '/users/%id%'
+            '/users/%id%',
+            'http' // optionally we may add here a context of the route to clarify the type of the route
         );
 
         // cli example
@@ -102,7 +104,8 @@ Instead of a simple string we pass a string in the `regular expression format`. 
             'export',
             'regexp',
             ['format'],
-            'users export %format%'
+            'users export %format%',
+            'console'
         );
         ...
 

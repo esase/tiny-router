@@ -40,6 +40,7 @@ class RouteTest extends TestCase
         ];
         $spec = '/test/%id%';
         $matchedAction = 'test';
+        $context = 'http';
 
         $instance = new Route(
             '',
@@ -53,7 +54,8 @@ class RouteTest extends TestCase
             ->setRequest($request)
             ->setSpec($spec)
             ->setType(Route::TYPE_REGEXP)
-            ->setRequestParams($requestParams);
+            ->setRequestParams($requestParams)
+            ->setContext($context);
 
         $this->assertEquals($request, $instance->getRequest());
         $this->assertEquals($controller, $instance->getController());
@@ -62,6 +64,7 @@ class RouteTest extends TestCase
         $this->assertEquals($spec, $instance->getSpec());
         $this->assertEquals($matchedAction, $instance->getMatchedAction());
         $this->assertEquals(Route::TYPE_REGEXP, $instance->getType());
+        $this->assertEquals($context, $instance->getContext());
     }
 
 }
