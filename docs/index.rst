@@ -99,7 +99,7 @@ Instead of a simple string we pass a string in the `regular expression format`. 
 
         // cli example
         $userExport = new Route(
-            '|^users export(\s(?P<format>(json|html|xml|rss)))?$|i', // format is optional
+            '#^users export(\s(?P<format>(json|html|xml|rss)))?$#i', // format is optional
             'UserCliController',
             'export',
             'regexp',
