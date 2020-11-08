@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/esase/tiny-router.svg?branch=master)](https://travis-ci.com/github/esase/tiny-router/builds)
 [![Coverage Status](https://coveralls.io/repos/github/esase/tiny-router/badge.svg?branch=master)](https://coveralls.io/github/esase/tiny-router?branch=master)
 
-**Tiny/Routing** - it's a layer between the outside world like a browser or a console command [CLI](https://en.wikipedia.org/wiki/CLI)
+**Tiny/Routing** - it's a layer between the outside world like a browser or a console command [CLI](https://en.wikipedia.org/wiki/Command-line_interface)
 and your application. The package may be integrated to any existing `php` project and it does not require any
 extra packages. 
 
