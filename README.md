@@ -19,7 +19,7 @@ a possibility to work with it using a plain requests (`literal`) and [Regexp](ht
 also it supports filtering requests by http requests types like: `GET`,  `POST`, etc.  
 Also you can use it as a routing for you `CLI` projects.
 
-So let's check a look an http routing example:
+**So let's check a look an http routing example:**
 
 ```php
 
